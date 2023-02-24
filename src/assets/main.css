@@ -28,6 +28,38 @@
 }
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  --color-bg: var(--clr-gray);
+  --color-text: var(--clr-black);
+  min-height: 100vh;
+}
+
+body.light-theme{
+  --color-bg: var(--clr-gray);
+  --color-text: var(--clr-black);
+}
+
+body.dark-theme{
+  --color-bg: var(--clr-black);
+  --color-text: var(--clr-white);
+}
+
+body{
+  background-color: var(--color-bg);
+}
+
+h1{
+  color: var(--color-text);
+}
+
+
 /* @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
