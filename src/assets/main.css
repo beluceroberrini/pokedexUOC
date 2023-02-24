@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+:root {
+    color-scheme: light dark;
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+
+    --type-normal: #abd484;
+    --type-fire: #f96159;
+    --type-water: #40b6da;
+    --type-grass: #81fca6;
+    --type-electric: #ffee2e;
+    --type-ice: #bcc6c7d5;
+    --type-fighting: #2740dec9;
+    --type-poisson: #963e80;
+    --type-ground: #a3884f;
+    --type-flying: #c7e7f0;
+    --type-psychic: #d9f46c;
+    --type-bug: #8a655b;
+    --type-rock: #2f3b55bf;
+    --type-ghost: #893bf653;
+    --type-dark: #715799;
+    --type-dragon: #09664d;
+    --type-steel: #858d8e;
+    --type-fairy: #d6aff0;
+}
+
+
+/* @media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
