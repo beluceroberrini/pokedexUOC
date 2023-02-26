@@ -17,17 +17,11 @@
 <script setup>
 import Home from '../views/Home.vue';
 
-
-
-
-
-
 </script>
 <style>
 .navbar{
     background-color: white;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5);
-    /* background-color: var(--color-bg); */
     --color-bg: var(--clr-white);
     display: flex;
     height: 12vh;
@@ -38,9 +32,5 @@ import Home from '../views/Home.vue';
 .navbar img{
     max-height: 3rem!important;
 }
-/* 
-.navbar.light-theme{
-    --color-bg: var(--clr-white);
-} */
 
 </style>

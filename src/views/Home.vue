@@ -1,31 +1,38 @@
 <template>
-    <div class="welcome">
-        <h1 class="title">Bienvenido al mundo Pokemon</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, laudantium eaque mollitia dolore numquam sed? Rem optio quaerat adipisci error.</p>
-        <h2 class="title">GO!</h2>
+    <section v-if="!isLoading" class="section container">
+        <div class="columns is-multiline is-centered is-mobile">
+            <div v-for="(pokemon, index) in pokemons" :key="pokemon.name"
+                class="column is-6-mobile is-4-tablet is-3-desktop is-2-widescreen ">
+                <router-link :to="{name:'details', params:{id: index + 1}}">
+                    <PokeCard :name="pokemon.name" :id="index + 1" />
+                </router-link>
+            </div>
+        </div>
+    </section>
+    <div class="loading-container" v-else>
+        <Loading />
     </div>
 </template>
 <script setup>
+import { onMounted, ref} from 'vue';
+import { getPokemons } from '../api';
+import PokeCard from '../components/PokeCard.vue';
+import Loading from '../components/Loading.vue';
+const pokemons = ref([]);
+const isLoading = ref(true);
+
+onMounted(async () => {
+    console.log('montado')
+    const res = await getPokemons();
+    isLoading.value = false;
+    pokemons.value = res.results;
+})
 </script>
 <style scoped>
-
-.welcome{
+.loading-container{
+    height: calc(100vh - 52px);
     display: flex;
-    justify-content:center;
-    flex-direction: column; 
+    justify-content: center;
     align-items: center;
-    padding-top: 120px;
-}
-.title {
-    margin: 20px;
-    font-size: 50px;
-}
-
-h2{
-    margin: 50px;
-    font-size: 50px;
-}
-p{
-    width: 45%;
 }
 </style>

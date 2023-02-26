@@ -35,12 +35,6 @@
   font-family: 'Rubik', sans-serif;
 }
 
-body {
-  --color-bg: var(--clr-gray);
-  --color-text: var(--clr-black);
-  min-height: 100vh;
-}
-
 body.light-theme{
   --color-bg: var(--clr-gray);
   --color-text: var(--clr-black);
@@ -59,22 +53,8 @@ h1{
   color: var(--color-text);
 }
 
-
-/* @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url('https://i.pinimg.com/originals/6e/f6/2b/6ef62b28c7e65f900ae813a377d99f51.png');
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
