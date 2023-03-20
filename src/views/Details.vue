@@ -81,7 +81,6 @@ onMounted(async () => {
 </script>
 <style scoped>
 .container {
-    height: calc(100vh - 52px);
     display: flex;
     padding: 1rem;
     flex-direction: column;
